@@ -1,6 +1,6 @@
 # Data Types and Data Structures in Python
 
-As we know that python is Dynamically typed programming language, than why do we need to learn about data type at all?
+As we know that python is Dynamically typed programming language, then why do we need to learn about data type at all?
 
 Although python automatically understands the data type, but it is important to know about data types so that we can utilize the power of data structures in future.
 
