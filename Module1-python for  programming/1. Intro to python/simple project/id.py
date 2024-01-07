@@ -1,24 +1,14 @@
-import os, time
-
-def pretty():
-    print('-'*10, 'List of Names' ,'-'*10)
-pretty() 
-firstname = []
-lastname = []  
-Name = []
-while True:
-    name = input('Enter your firstname: ').capitalize().strip()
-    sname = input('Enter your lastname: ').capitalize().strip()
-    fullname = name + ' ' +sname
-    if fullname in Name:
-        Name.remove(fullname)
-        print('The name is in the list')
-        time.sleep(3)
+sentence = input('Input any sentence > ')
+for letter in sentence:
+    if letter.lower()== 'r':
+        print('\033[33m', end='')
+    elif letter.lower()=='b' or 'g' or 'p' or 'y':
+        print('\033[32m', end='')
     else:
-        pass
-    os.system('clear')
-    pretty()
-    Name.append(fullname)
-    for item in Name:
-        print(item)
+        print('\033[0m', end='')
+    print(letter, end='')
+print()
     
+    
+
+
