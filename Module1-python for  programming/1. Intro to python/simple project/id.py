@@ -1,14 +1,25 @@
-sentence = input('Input any sentence > ')
-for letter in sentence:
-    if letter.lower()== 'r':
-        print('\033[33m', end='')
-    elif letter.lower()=='b' or 'g' or 'p' or 'y':
-        print('\033[32m', end='')
+import random
+print('-'*10,'🌟Hangman🌟','-'*10)
+lst = 'b a g'
+live = 6
+while True:
+    ls = input('Guess the letter > ')
+    if ls in lst and ls=='b':
+        print('correct')
+        print('b _ _')
+    elif ls in lst and ls=='a':
+        print('correct')
+        print('_a_')
+    elif ls in lst and ls=='g':
+        print('correct')
+        print('_ _ g')
+        continue
+    elif ls not in lst:
+        print('Not there!')
+        print(live - 1, 'left')
     else:
-        print('\033[0m', end='')
-    print(letter, end='')
-print()
-    
-    
+        break
+        
+print('bag')
 
 
