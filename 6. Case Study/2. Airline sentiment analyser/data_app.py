@@ -6,12 +6,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
-from wordcloud import WordCloud,STOPWORDS
+from wordcloud import WordCloud, STOPWORDS
 import create_wordcloud
 from PIL import Image
 
 
-dataset_loc = "data/Tweets.csv"
+dataset_loc = "Tweets.csv"
 image_loc = "img/airline.jpeg"
 pos_loc = "img/pos.png"
 neg_loc = "img/neg.png"
