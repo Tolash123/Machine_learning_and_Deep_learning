@@ -27,7 +27,7 @@ def load_sidebar():
     st.sidebar.warning("Made with :heart: :sunglasses:")
 
 # data
-@st.cache
+@st.cache_data
 def load_data(dataset_loc):
     df = pd.read_csv(dataset_loc)
     df = df.loc[:, ['airline_sentiment', 'airline', 'text']]
@@ -81,7 +81,7 @@ def load_viz(df):
         # ***************
         st.subheader("Plotly - Tweet Sentiment Count")
         temp = pd.DataFrame(df['airline_sentiment'].value_counts())
-        fig = px.bar(temp, x=temp.index, y='airline_sentiment')
+        fig = px.bar(temp, x=temp.index, y='count')
         st.plotly_chart(fig, use_container_width=True)
         # ***************
 
